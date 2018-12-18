@@ -1,0 +1,67 @@
+<!-- Add the following lines to effects, materials, visual_scenes tags -->
+
+<!-- EDITED LIBRARY EFFECTS -->
+<library_effects>
+  <effect id="MY_COLOR-effect" name="MY_COLOR-effect">
+    <profile_COMMON>
+      <technique sid="common">
+        <phong>
+          <emission>
+            <color>0.0 0.0 0.0 1.0</color>
+          </emission>
+          <ambient>
+            <color>0.0 0.0 0.0 1.0</color>
+          </ambient>
+          <diffuse>
+            <color>0.5451851 0.5985184 0.7466667 1.0</color>
+          </diffuse>
+          <specular>
+            <color>0.5 0.5 0.5 1.0</color>
+          </specular>
+          <shininess>
+            <float>50.0</float>
+          </shininess>
+          <transparency>
+            <float>1.0</float>
+          </transparency>
+          <index_of_refraction>
+            <float>1.0</float>
+          </index_of_refraction>
+        </phong>
+      </technique>
+      <extra>
+        <technique profile="GOOGLEEARTH">
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </profile_COMMON>
+    <extra>
+      <technique profile="MAX3D">
+        <double_sided>1</double_sided>
+      </technique>
+    </extra>
+  </effect>
+</library_effects>
+
+<!-- EDITED LIBRARY MATERIALS -->
+<library_materials>
+  <material id="MY_COLOR-material" name="MY_COLOR">
+    <instance_effect url="#MY_COLOR-effect"/>
+  </material>
+</library_materials>
+
+<!-- EDITED LIBRARY VISUAL_SCENES, INSIDE TAG BIND_MATERIAL -->
+<library_visual_scenes>
+  <bind_material>
+    <technique_common>
+      <instance_material symbol="MY_COLOR-material" target="#MY_COLOR-material">
+        <bind_vertex_input semantic="UVTex" input_semantic="TEXCOORD" input_set="0"/>
+      </instance_material>
+    </technique_common>
+  </bind_material>
+</library_visual_scenes>
+
+<!-- Change "triangles" into "polylist" and add material tag  -->
+<polylist material="MY_COLOR-material">
+</polylist>
+

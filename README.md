@@ -22,6 +22,12 @@ This repository can be used in two different ways:
 
 - [ironBot](models/ironBot): the flying iCub model.
 
+## Utilities
+
+- inside the [doc](doc) folder, it is explained how to edit the meshes and the urdf file in order to be able to use them inside the [iDyntree visualizer](https://github.com/robotology/idyntree/blob/master/src/visualization/src/Visualizer.cpp).
+
+- inside the [patches](patches) folder, it is explained how to edit the meshes in order to be able to see colors in the [iDyntree visualizer](https://github.com/robotology/idyntree/blob/master/src/visualization/src/Visualizer.cpp).
+
 ## Mantainer
 
 Gabriele Nava ([@gabrielenava](https://github.com/gabrielenava)).
