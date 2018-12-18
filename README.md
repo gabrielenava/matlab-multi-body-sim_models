@@ -1,6 +1,6 @@
 # matlab-multi-body-sim_models
 
-Collection of models and meshes to be used inside the `matlab-multi-body-sim` simulator. They can also be used as standalone `urdf` models, e.g. with the [idyntree](https://github.com/robotology/idyntree) library.
+Collection of models and meshes to be used inside the `matlab-multi-body-sim` simulator. They can also be used as standalone `urdf` models, e.g. with the [iDyntree](https://github.com/robotology/idyntree) library.
 
 ## Operating system
 
