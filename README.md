@@ -20,8 +20,6 @@ This repository can be used in two different ways:
 
 - [iCubGazeboV2_5](models/iCubGazeboV2_5): the iCub model with backpack.
 
-- [ironBot](models/ironBot): the flying iCub model.
-
 ## Utilities
 
 - inside the [doc](doc) folder, it is explained how to edit the meshes and the urdf file in order to be able to use them inside the [iDyntree visualizer](https://github.com/robotology/idyntree/blob/master/src/visualization/src/Visualizer.cpp).
