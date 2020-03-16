@@ -1,4 +1,4 @@
-# mbs_models
+# Multi-Body Simulator (MBS) Models
 
 Collection of models and meshes to be used inside the `multi-body simulator`. They can also be used as standalone `.urdf` models, e.g. with the [iDyntree](https://github.com/robotology/idyntree) library.
 
