@@ -2,11 +2,9 @@
 
 Collection of models and meshes to be used inside the `multi-body simulator`. They can also be used as standalone `.urdf` models, e.g. with the [iDyntree](https://github.com/robotology/idyntree) library.
 
-
 ## Operating system
 
-The code has been developed and tested on Ubuntu 18.04 LTS.
-
+The code has been developed and tested on Ubuntu 18.04.5 LTS.
 
 ## Installation and usage
 
@@ -22,11 +20,19 @@ This repository can be used in two different ways:
 
 - [iCubGazeboV2_5](models/iCubGazeboV2_5): the iCub model with backpack.
 
+- [humanModel](models/humanModel): a model of a human.
+
+- [othex](models/othex): the model of the Othex hexarotor.
+
+- [othex](models/othex_3d_arm): the model of the Othex hexarotor with 3 DoFs arm.
+
+- [singleMass](models/singleMass): a model of a single mass.
+
 ## Utilities
 
-- inside the [doc](doc) folder, it is explained how to edit meshes and urdf file in order to be able to use them inside the [iDyntree visualizer](https://github.com/robotology/idyntree/blob/master/src/visualization/src/Visualizer.cpp).
+- inside the [doc](doc) folder, it is explained how to edit meshes and urdf file in order to properly visualize the robot in Matlab.
 
-- inside the [patches](patches) folder, it is explained how to edit the meshes in order to be able to add colors in the [iDyntree visualizer](https://github.com/robotology/idyntree/blob/master/src/visualization/src/Visualizer.cpp).
+- inside the [patches](patches) folder, it is explained how to edit the meshes in order to be able to add colors, indent and simplify them.
 
 ## Mantainer
 

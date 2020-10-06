@@ -1,0 +1,66 @@
+<robot name="othex_3d_arm">
+  <link name="root_link">
+    <inertial>
+      <origin xyz="-0.0026057700000000003 2.6285900000000003e-06 -0.0551054" rpy="0 0 0"/>
+      <mass value="1.73671"/>
+      <inertia ixx="0.102027" ixy="3.49564e-06" ixz="-0.000139376" iyy="0.0882212" iyz="3.14137e-06" izz="0.187815"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 -0.03475" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://meshes/sim_drone.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="green">
+        <color rgba="0 1 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.03475" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://meshes/sim_drone.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="frame_prop_6"/>
+  <joint name="frame_prop_6_fixed_joint" type="fixed">
+    <origin xyz="0.36089 -0.371224 -0.10081690000000001" rpy="-0.618076381244 -0.142727918556 -0.640970632391"/>
+    <parent link="root_link"/>
+    <child link="frame_prop_6"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="frame_prop_5"/>
+  <joint name="frame_prop_5_fixed_joint" type="fixed">
+    <origin xyz="-0.0221766 -0.39737700000000004 -0.10081690000000001" rpy="0.618076202381 -0.142728250329 -1.80249069312"/>
+    <parent link="root_link"/>
+    <child link="frame_prop_5"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="frame_prop_4"/>
+  <joint name="frame_prop_4_fixed_joint" type="fixed">
+    <origin xyz="-0.365744 -0.156834 -0.10065560000000001" rpy="-0.618076126447 -0.142728328901 -2.56083329174"/>
+    <parent link="root_link"/>
+    <child link="frame_prop_4"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="frame_prop_3"/>
+  <joint name="frame_prop_3_fixed_joint" type="fixed">
+    <origin xyz="-0.365827 0.15675 -0.10081690000000001" rpy="0.618076126447 -0.142728328901 2.56083329174"/>
+    <parent link="root_link"/>
+    <child link="frame_prop_3"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="frame_prop_2"/>
+  <joint name="frame_prop_2_fixed_joint" type="fixed">
+    <origin xyz="-0.0221766 0.39737700000000004 -0.10081690000000001" rpy="-0.618076202381 -0.142728250329 1.80249069312"/>
+    <parent link="root_link"/>
+    <child link="frame_prop_2"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="frame_prop_1"/>
+  <joint name="frame_prop_1_fixed_joint" type="fixed">
+    <origin xyz="0.36089 0.371224 -0.10081690000000001" rpy="0.618076381244 -0.142727918556 0.640970632391"/>
+    <parent link="root_link"/>
+    <child link="frame_prop_1"/>
+    <dynamics damping="0.1"/>
+  </joint>
+</robot>

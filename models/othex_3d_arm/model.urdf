@@ -1,0 +1,212 @@
+<robot name="othex_3d_arm">
+  <link name="root_link">
+    <inertial>
+      <origin xyz="-0.0026057700000000003 2.6285900000000003e-06 -0.0551054" rpy="0 0 0"/>
+      <mass value="1.73671"/>
+      <inertia ixx="0.102027" ixy="3.49564e-06" ixz="-0.000139376" iyy="0.0882212" iyz="3.14137e-06" izz="0.187815"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 -0.03475" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://meshes/sim_drone.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="green">
+        <color rgba="0 1 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.03475" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://meshes/sim_drone.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="frame_prop_6"/>
+  <joint name="frame_prop_6_fixed_joint" type="fixed">
+    <origin xyz="0.36089 -0.371224 -0.10081690000000001" rpy="-0.618076381244 -0.142727918556 -0.640970632391"/>
+    <parent link="root_link"/>
+    <child link="frame_prop_6"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="frame_prop_5"/>
+  <joint name="frame_prop_5_fixed_joint" type="fixed">
+    <origin xyz="-0.0221766 -0.39737700000000004 -0.10081690000000001" rpy="0.618076202381 -0.142728250329 -1.80249069312"/>
+    <parent link="root_link"/>
+    <child link="frame_prop_5"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="frame_prop_4"/>
+  <joint name="frame_prop_4_fixed_joint" type="fixed">
+    <origin xyz="-0.365744 -0.156834 -0.10065560000000001" rpy="-0.618076126447 -0.142728328901 -2.56083329174"/>
+    <parent link="root_link"/>
+    <child link="frame_prop_4"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="frame_prop_3"/>
+  <joint name="frame_prop_3_fixed_joint" type="fixed">
+    <origin xyz="-0.365827 0.15675 -0.10081690000000001" rpy="0.618076126447 -0.142728328901 2.56083329174"/>
+    <parent link="root_link"/>
+    <child link="frame_prop_3"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="frame_prop_2"/>
+  <joint name="frame_prop_2_fixed_joint" type="fixed">
+    <origin xyz="-0.0221766 0.39737700000000004 -0.10081690000000001" rpy="-0.618076202381 -0.142728250329 1.80249069312"/>
+    <parent link="root_link"/>
+    <child link="frame_prop_2"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="frame_prop_1"/>
+  <joint name="frame_prop_1_fixed_joint" type="fixed">
+    <origin xyz="0.36089 0.371224 -0.10081690000000001" rpy="0.618076381244 -0.142727918556 0.640970632391"/>
+    <parent link="root_link"/>
+    <child link="frame_prop_1"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="3d_arm_base">
+    <inertial>
+      <origin xyz="0 4.4488606248639985e-07 0.03939519999999999" rpy="3.14159265359 0 0"/>
+      <mass value="0.616668"/>
+      <inertia ixx="0.000971781" ixy="-3.73057e-05" ixz="0.0" iyy="0.00113048" iyz="0.0" izz="0.00113892"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 -0.040549999999999975" rpy="3.14159265359 0 0"/>
+      <geometry>
+        <mesh filename="package://meshes/sim_3d_arm_base.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.040549999999999975" rpy="3.14159265359 0 0"/>
+      <geometry>
+        <mesh filename="package://meshes/sim_3d_arm_base.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="3d_arm_base_FT_sensor" type="fixed">
+    <origin xyz="0 0 -0.0753" rpy="3.14159265359 0 0"/>
+    <parent link="root_link"/>
+    <child link="3d_arm_base"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="3d_arm_link1">
+    <inertial>
+      <origin xyz="-0.054999073119 0.0078607 0.0002829999999999777" rpy="0 0 0"/>
+      <mass value="0.0359043"/>
+      <inertia ixx="1.07488e-05" ixy="1.40772e-10" ixz="0.0" iyy="6.04367e-06" iyz="-3.20421e-07" izz="1.28486e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.055 0 0.13695" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://meshes/sim_3d_arm_link1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="red">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.055 0 0.13695" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://meshes/sim_3d_arm_link1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="3d_arm_link1_roll" type="revolute">
+    <origin xyz="0.055000000000060445 0 0.09639999999999996" rpy="3.14159265359 0 0"/>
+    <axis xyz="1.0 0.0 0.0"/>
+    <parent link="3d_arm_base"/>
+    <child link="3d_arm_link1"/>
+    <limit effort="50000" lower="-0.785398163397" upper="0.785398163397" velocity="50000"/>
+    <dynamics damping="1.0"/>
+  </joint>
+  <link name="3d_arm_link2">
+    <inertial>
+      <origin xyz="-0.0256328 0.02574106 -0.13242299999999996" rpy="0 0 0"/>
+      <mass value="0.32835"/>
+      <inertia ixx="0.00313486" ixy="7.71013e-06" ixz="-0.000237211" iyy="0.00293735" iyz="-5.06684e-06" izz="0.000455577"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0.022977599999999904 0.13796500000000014" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://meshes/sim_3d_arm_link2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="0 0 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0.022977599999999904 0.13796500000000014" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://meshes/sim_3d_arm_link2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="3d_arm_link2_pitch" type="revolute">
+    <origin xyz="-0.055 -0.0229776 -0.0010150000000000159" rpy="0 0 0"/>
+    <axis xyz="0.0 -0.999025 -0.0441471"/>
+    <parent link="3d_arm_link1"/>
+    <child link="3d_arm_link2"/>
+    <limit effort="50000" lower="-1.57079632679" upper="1.57079632679" velocity="50000"/>
+    <dynamics damping="1.0"/>
+  </joint>
+  <link name="3d_arm_upper_link3">
+    <inertial>
+      <origin xyz="0.0119854 -0.09183700000000002 -0.052727000000000024" rpy="0 0 0"/>
+      <mass value="0.194297"/>
+      <inertia ixx="0.000233643" ixy="-4.28662e-06" ixz="3.80758e-05" iyy="0.00020826" iyz="1.58754e-05" izz="8.9194e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.0355641000000011 -0.10577699999994059 0.425409999998654" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://meshes/sim_3d_arm_link3_prt1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="yellow">
+        <color rgba="1 1 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0355641000000011 -0.10577699999994059 0.425409999998654" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://meshes/sim_3d_arm_link3_prt1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="3d_arm_link3_pitch" type="revolute">
+    <origin xyz="-0.0355641 0.1287546 -0.287445" rpy="0 0 0"/>
+    <axis xyz="0.0 -0.999025 -0.0441471"/>
+    <parent link="3d_arm_link2"/>
+    <child link="3d_arm_upper_link3"/>
+    <limit effort="50000" lower="-1.83259571459" upper="1.57079632679" velocity="50000"/>
+    <dynamics damping="1.0"/>
+  </joint>
+  <link name="3d_arm_lower_link3">
+    <inertial>
+      <origin xyz="0 0 0.0026028717297972292" rpy="3.09743122163 -0.241285371067 0"/>
+      <mass value="0.00740402"/>
+      <inertia ixx="8.68795e-07" ixy="7.44608e-09" ixz="-1.68498e-07" iyy="8.28626e-07" iyz="-3.02289e-08" izz="1.51135e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.13720266665028258 -0.006045869936857007 -0.48651961986727393" rpy="3.09743122163 -0.241285371067 0"/>
+      <geometry>
+        <mesh filename="package://meshes/sim_3d_arm_link3_prt2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="pink">
+        <color rgba="1 0 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.13720266665028258 -0.006045869936857007 -0.48651961986727393" rpy="3.09743122163 -0.241285371067 0"/>
+      <geometry>
+        <mesh filename="package://meshes/sim_3d_arm_link3_prt2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="3d_arm_endEff_FT_sensor" type="fixed">
+    <origin xyz="0.0185903 -0.0895134 -0.079575" rpy="-3.09611556086 -0.241045460818 -0.0108632691777"/>
+    <parent link="3d_arm_upper_link3"/>
+    <child link="3d_arm_lower_link3"/>
+    <dynamics damping="0.1"/>
+  </joint>
+</robot>
